@@ -7,7 +7,7 @@ pipeline {
 
     stages {
         stage('Install, Test & Build') {
-            agent { docker { image 'node:20-alpine'; reuseNode true } }
+            agent { docker { image 'node:20-alpine'; reuseNode true; args '-e HOME=/tmp' } }
             steps {
                 sh 'npm ci'
                 sh 'npm test --if-present'
