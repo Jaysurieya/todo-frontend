@@ -67,7 +67,7 @@ function App() {
 
   return (
     <div className="app">
-      <h1>Simple Todo [test]</h1>
+      <h1>Simple Todo [Jenkins]</h1>
       <form onSubmit={addTodo} className="add-form">
         <input
           value={text}
